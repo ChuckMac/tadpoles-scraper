@@ -1,0 +1,7 @@
+{
+    "username": "your@login.com",
+    "password": "xxxxxx",
+    "login_type": "email",
+    "image_path": "./images/%child%/%YYYY%/%MM%/",
+    "file_pattern": "%child%_%keymd5%"
+}

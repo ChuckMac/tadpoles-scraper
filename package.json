@@ -1,0 +1,36 @@
+{
+  "name": "tadpoles-scraper",
+  "version": "1.0.0",
+  "description": "A web scraper for tadpoles pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tadpoles",
+    "childcare",
+    "pictures",
+    "scraper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuckmac/tadpoles-scraper.git"
+  },
+  "author": "chuck mac",
+  "license": "MIT",
+  "dependencies": {
+    "@ronomon/utimes": "^2.2.0",
+    "async-retry": "^1.2.1",
+    "axios": "^0.18.0",
+    "axios-cookiejar-support": "^0.3.5",
+    "crypto": "^1.0.1",
+    "graceful-fs": "^4.1.11",
+    "imghdr": "^0.1.6",
+    "mkdirp": "^0.5.1",
+    "piexifjs": "^1.0.4",
+    "png-chunk-text": "^1.0.0",
+    "png-chunks-encode": "^1.0.0",
+    "png-chunks-extract": "^1.0.0",
+    "query-string": "^6.1.0"
+  }
+}
