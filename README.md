@@ -48,7 +48,7 @@ Valid replacement values for `file_pattern`
 | %%keymd5%% | Shortened MD5 summary of the Tadpoles image key |
 
 ### Usage
-Requires [Node.js](https://nodejs.org/) v4+ to run.
+Requires [Node.js](https://nodejs.org/) v4+ as well as Python 2.7.x (3.x not supported).  On Windows, VCBuild.exe will be required.  If this is already installed and in the system path, you should be good.  Otherwise, you can install the necessary files via npm in an administrative command prompt `npm install -g windows-build-tools`.
 
 Install the dependencies
 ```sh
