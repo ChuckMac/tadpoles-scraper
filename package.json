@@ -19,7 +19,7 @@
   "author": "chuck mac",
   "license": "MIT",
   "dependencies": {
-    "@ronomon/utimes": "^2.2.0",
+    "utimes": "^4.0.2",
     "async-retry": "^1.2.1",
     "axios": "^0.18.0",
     "axios-cookiejar-support": "^0.3.5",
