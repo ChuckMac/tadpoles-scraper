@@ -10,7 +10,7 @@ const tough = require('tough-cookie')
 const crypto = require('crypto')
 const imghdr = require('imghdr')
 const piexif = require('piexifjs')
-const utimes = require('@ronomon/utimes');
+const utimes = require('utimes');
 
 const extract = require('png-chunks-extract')
 const encode = require('png-chunks-encode')
