@@ -174,7 +174,7 @@ async function maybe_download_attachment(imgkey, event) {
 
 	filename = false
 	
-	if (! fs.existsSync(dirbase + filebase + '.jpg' ) && ! fs.existsSync(dirbase + filebase + '.png' ) && ! fs.existsSync(dirbase + filebase + '.mp4' ) ) {
+	if (! fs.existsSync(dirbase + filebase + '.jpg' ) && ! fs.existsSync(dirbase + filebase + '.png' ) && ! fs.existsSync(dirbase + filebase + '.mp4' ) && ! fs.existsSync(dirbase + filebase + '.pdf' )) {
 		console.log('    -- File ' + filebase + ' from ' + event.event_date + ' does not exist... downloading')
 		await mkdirp( dirbase ) 
 		try {
@@ -192,6 +192,9 @@ async function maybe_download_attachment(imgkey, event) {
 					fs.writeFileSync(filename, response.data)
 				} else if (response.headers['content-type'] == 'video/mp4') {
 					filename = dirbase + filebase + '.mp4'
+					fs.writeFileSync(filename, response.data)
+				} else if (response.headers['content-type'] == 'application/pdf') {
+					filename = dirbase + filebase + '.pdf'
 					fs.writeFileSync(filename, response.data)
 				} else {
 					console.log('      -- content-type ' + response.headers['content-type'] + ' excluded - skipping' )
