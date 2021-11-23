@@ -1,21 +1,24 @@
 # Tadpoles Scraper
 
-A Node.js tool to batch download images and video from the [Tadpoles](https://www.tadpoles.com) app.
+## Summary
+
+A Node.js tool to batch download images and video from the [Tadpoles](https://www.tadpoles.com) app/website.
 
 The Tadpoles website and app has several deficiencies which this tries to address:
 
-  - No bulk download functionality
-  - Media does not contain EXIF or metadata information on when it was taken
+- No bulk download functionality
+- Media does not contain EXIF or metadata information on when it was taken
 
-### Supported formats
+## Supported Formats
 
-  - PNG
-  - JPEG
-  - MP4
+- PNG
+- JPEG
+- MP4
+- PDF
 
 Any other file types will be ignored.
 
-### Config
+## Config
 
 There is an included `config.json` file which needs to be modified for use.
 
@@ -47,23 +50,26 @@ Valid replacement values for `file_pattern`
 | %%imgkey%% | the unique image key assigned by Tadpoles (long) |
 | %%keymd5%% | Shortened MD5 summary of the Tadpoles image key |
 
-### Usage
+## Usage
+
 Requires [Node.js](https://nodejs.org/) v4+ as well as [Python 2.7+](https://www.python.org/downloads/) (3.x not supported).  On Windows, VCBuild.exe will be required.  If this is already installed and in the system path, you should be good.  Otherwise, you can install the necessary files via npm in an administrative command prompt with
-```
+
+```sh
 npm install -g windows-build-tools
 ```
 
 Then, install the package dependencies
+
 ```sh
 npm install -d
 ```
 
 Run the scraper
+
 ```sh
 node index.js
 ```
 
-License
-----
+## License
 
 MIT
