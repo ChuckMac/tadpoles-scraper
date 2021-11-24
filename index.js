@@ -292,7 +292,7 @@ async function main () {
 	admit = await admit()
 	info = await get_overview()
 	finalitem = info.data.first_event_time
-	lastitem = info.data.last_event_time
+	lastitem = info.data.last_event_time + 1000
 
 	while ( finalitem != lastitem ) {
 
