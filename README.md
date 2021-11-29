@@ -9,6 +9,8 @@ The Tadpoles website and app has several deficiencies which this tries to addres
 - No bulk download functionality
 - Media does not contain EXIF or metadata information on when it was taken
 
+Comments that were posted with the photos are also saved.  If a picture has a comment, you will see a similarly named `txt` file with it.
+
 ## Supported Formats
 
 - PNG
