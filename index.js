@@ -176,7 +176,18 @@ async function maybe_download_attachment(imgkey, event) {
 	
 	if (! fs.existsSync(dirbase + filebase + '.jpg' ) && ! fs.existsSync(dirbase + filebase + '.png' ) && ! fs.existsSync(dirbase + filebase + '.mp4' ) && ! fs.existsSync(dirbase + filebase + '.pdf' )) {
 		console.log('    -- File ' + filebase + ' from ' + event.event_date + ' does not exist... downloading')
-		await mkdirp( dirbase ) 
+		await mkdirp( dirbase, function(err) {
+			if (err != null) {
+				console.error('error calling mkdirp on path: ', dirbase, '\n\ndetails: ', err)
+			}
+		});
+		// save comment to file if it exists
+		var comment = event.comment;
+		if (comment !== undefined && comment !== null && comment !== '') {
+			var commentFileLocation = dirbase + filebase + '.txt'
+			fs.writeFileSync(commentFileLocation, comment)
+		}
+		// download file
 		try {
 			await client.get(imgurl, {
 				responseType: 'arraybuffer',
